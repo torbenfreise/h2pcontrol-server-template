@@ -77,8 +77,8 @@ Format code:
 uv run ruff format src/
 ```
 
-These checks also run automatically on every push and pull request via the GitHub Actions workflow at `.github/workflows/lint.yml`.
-
+These checks also run automatically on every pull request and pushes to main via
+the [GitHub Actions workflow](.github/workflows/lint.yml)
 
 ## Proto dependencies
 

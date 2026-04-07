@@ -1,6 +1,5 @@
 import asyncio
 import logging
-import time
 from types import SimpleNamespace
 
 from grpc import aio
@@ -23,7 +22,7 @@ async def connect(config: SimpleNamespace) -> None:
                 service=ServiceDefinition(
                     name=config.service.name,
                     description=config.service.description,
-                    port=str(config.service.port),
+                    port=config.service.port,
                 )
             )
         )
@@ -31,11 +30,8 @@ async def connect(config: SimpleNamespace) -> None:
 
         async def heartbeat_requests():
             while True:
-                yield HeartbeatRequest(timestamp=int(time.time()))
+                yield HeartbeatRequest(healthy=True)
                 await asyncio.sleep(config.manager.heartbeat_interval_s)
 
-        async for response in stub.Heartbeat(heartbeat_requests()):
-            if response.healthy:
-                logger.debug(f"Heartbeat acknowledged (manager ts={response.timestamp})")
-            else:
-                logger.warning("Manager reports service unhealthy")
+        async for _ in stub.Heartbeat(heartbeat_requests()):
+            logger.debug("Heartbeat acknowledged")

@@ -4,38 +4,38 @@ requires-python = ">=3.14"
 
 [[package]]
 name = "beyer-labs-h2pcontrol-grpc-python"
-version = "1.80.0.1.20260407215636+5ca14a73b0a1"
+version = "1.80.0.1.20260407223931+2b17341dc6b9"
 source = { registry = "https://buf.build/gen/python" }
 dependencies = [
     { name = "beyer-labs-h2pcontrol-protocolbuffers-python" },
     { name = "grpcio" },
 ]
 wheels = [
-    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-grpc-python/beyer_labs_h2pcontrol_grpc_python-1.80.0.1.20260407215636+5ca14a73b0a1-py3-none-any.whl" },
+    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-grpc-python/beyer_labs_h2pcontrol_grpc_python-1.80.0.1.20260407223931+2b17341dc6b9-py3-none-any.whl" },
 ]
 
 [[package]]
 name = "beyer-labs-h2pcontrol-protocolbuffers-pyi"
-version = "34.1.0.1.20260407215636+5ca14a73b0a1"
+version = "34.1.0.1.20260407223931+2b17341dc6b9"
 source = { registry = "https://buf.build/gen/python" }
 dependencies = [
     { name = "protobuf" },
     { name = "types-protobuf" },
 ]
 wheels = [
-    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-protocolbuffers-pyi/beyer_labs_h2pcontrol_protocolbuffers_pyi-34.1.0.1.20260407215636+5ca14a73b0a1-py3-none-any.whl" },
+    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-protocolbuffers-pyi/beyer_labs_h2pcontrol_protocolbuffers_pyi-34.1.0.1.20260407223931+2b17341dc6b9-py3-none-any.whl" },
 ]
 
 [[package]]
 name = "beyer-labs-h2pcontrol-protocolbuffers-python"
-version = "34.1.0.1.20260407215636+5ca14a73b0a1"
+version = "34.1.0.1.20260407223931+2b17341dc6b9"
 source = { registry = "https://buf.build/gen/python" }
 dependencies = [
     { name = "beyer-labs-h2pcontrol-protocolbuffers-pyi" },
     { name = "protobuf" },
 ]
 wheels = [
-    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-protocolbuffers-python/beyer_labs_h2pcontrol_protocolbuffers_python-34.1.0.1.20260407215636+5ca14a73b0a1-py3-none-any.whl" },
+    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-protocolbuffers-python/beyer_labs_h2pcontrol_protocolbuffers_python-34.1.0.1.20260407223931+2b17341dc6b9-py3-none-any.whl" },
 ]
 
 [[package]]

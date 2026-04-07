@@ -3,7 +3,7 @@ address = "0.0.0.0:50051"
 heartbeat_interval_s = 5
 
 [service]
-name = "greeter"
-description = "Greeter service"
+name = "example-service"
+description = "Example h2pcontrol service"
 host = "0.0.0.0"
 port = 50055

@@ -1,0 +1,16 @@
+name: Lint
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --group dev
+      - run: uv run ruff check src/
+      - run: uv run ruff format --check src/
+      - run: uv run pyright src/

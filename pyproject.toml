@@ -1,7 +1,7 @@
 [project]
 name = "greeterserver"
 version = "0.1.0"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "grpcio>=1.80.0",
     "beyer-labs-h2pcontrol-grpc-python>=1.80.0.1.20260406165239",

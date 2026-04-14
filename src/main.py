@@ -21,7 +21,7 @@ async def register_service(cfg):
 
 
 async def main():
-    cfg = config.load()
+    cfg = config.H2PConfig()  # type: ignore[call-arg]
     await asyncio.gather(
         service.run(cfg),
         register_service(cfg),

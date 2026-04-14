@@ -55,7 +55,7 @@ If you have buf installed you can test the service by running the `buf curl`:
   --http2-prior-knowledge \
   --schema buf.build/beyer-labs/h2pcontrol \
   -d '{"name": "World"}' \
-  "http://localhost:50055/h2pcontrol.greeter.v1.GreeterService/SayHello"  
+  "http://localhost:50055/h2pcontrol.example.v1.ExampleService/SayHello"  
 ```
 
 ## Format and linting

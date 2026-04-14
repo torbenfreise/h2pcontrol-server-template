@@ -1,5 +1,4 @@
 import logging
-from types import SimpleNamespace
 
 from grpc import aio
 from h2pcontrol.example.v1.example_pb2 import (
@@ -10,6 +9,8 @@ from h2pcontrol.example.v1.example_pb2_grpc import (
     ExampleServiceServicer,
     add_ExampleServiceServicer_to_server,
 )
+
+from src.config import H2PConfig
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +23,7 @@ class ExampleService(ExampleServiceServicer):
         return response
 
 
-async def run(config: SimpleNamespace) -> None:
+async def run(config: H2PConfig) -> None:
     server = aio.server()
     add_ExampleServiceServicer_to_server(ExampleService(), server)
     server.add_insecure_port(f"{config.service.host}:{config.service.port}")

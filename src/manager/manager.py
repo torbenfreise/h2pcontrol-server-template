@@ -1,6 +1,5 @@
 import asyncio
 import logging
-from types import SimpleNamespace
 
 from grpc import aio
 from h2pcontrol.manager.v1.manager_pb2 import (
@@ -10,10 +9,12 @@ from h2pcontrol.manager.v1.manager_pb2 import (
 )
 from h2pcontrol.manager.v1.manager_pb2_grpc import ManagerServiceStub
 
+from src.config import H2PConfig
+
 logger = logging.getLogger(__name__)
 
 
-async def connect(config: SimpleNamespace) -> None:
+async def connect(config: H2PConfig) -> None:
     async with aio.insecure_channel(config.manager.address) as channel:
         stub = ManagerServiceStub(channel)
 

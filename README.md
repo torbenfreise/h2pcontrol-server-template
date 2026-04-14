@@ -29,6 +29,9 @@ host = "0.0.0.0"
 port = 50055
 ```
 
+These config values can be overridden using environment variables. For example, the manager address
+could be overridden with a MANAGER__ADDRESS ENV var.
+
 ## Running
 
 Use the following command to start the service:

@@ -1,9 +1,8 @@
 import asyncio
 import logging
 
-import config
-import manager
-import service
+from service import ExampleService
+from h2pcontrol.sdk import H2PServerConfig
 
 logging.basicConfig(
     level=logging.INFO,
@@ -13,19 +12,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-async def register_service(cfg):
-    try:
-        await manager.connect(cfg)
-    except Exception as e:
-        logger.error(f"Failed to register service with h2pcontrol manager: {e}")
-
-
 async def main():
-    cfg = config.H2PConfig()  # type: ignore[call-arg]
-    await asyncio.gather(
-        service.run(cfg),
-        register_service(cfg),
-    )
+    cfg = H2PServerConfig()  # type: ignore[call-arg]
+    service = ExampleService(cfg)
+    await service.start()
 
 
 if __name__ == "__main__":

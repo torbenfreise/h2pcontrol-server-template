@@ -1,1 +1,1 @@
-from .example import run as run
+from .example import  ExampleService as ExampleService

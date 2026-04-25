@@ -1,6 +1,7 @@
 # h2pcontrol Server Template
 
-This project serves as a template for implementing h2pcontrol servers.
+This project serves as a both a template for implementing h2pcontrol servers,
+and a concrete  implementation of the example service defined in the [h2pcontrol BSR.](https://buf.build/beyer-labs/h2pcontrol/docs/main%3Ah2pcontrol.example.v1)
 
 ## Requirements
 
@@ -58,11 +59,62 @@ If you have buf installed you can test the service by running the `buf curl`:
   "http://localhost:50055/h2pcontrol.example.v1.ExampleService/SayHello"  
 ```
 
-## Format and linting
+## Adapting this template
 
-This project uses [Ruff](https://docs.astral.sh/ruff/) for linting and formatting.
+Available services are defined in the [h2pcontrol Buf Schema Registry](https://buf.build/beyer-labs/h2pcontrol).
 
-Check for lint issues:
+### 1. Replace the service implementation
+
+Rename `src/service/example.py` to match your service (e.g. `src/service/greeter.py`) and replace its contents:
+
+```python
+from h2pcontrol.<package>.<name>_pb2 import ...
+from h2pcontrol.<package>.<name>_pb2_grpc import <ServiceName>Servicer
+from h2pcontrol.sdk import H2PServer
+
+
+class <ServiceName>(H2PServer, <ServiceName>Servicer):
+    # implement your server methods here
+```
+
+### 2. Update the re-export
+
+In `src/service/__init__.py`, replace the import to match your new class:
+
+```python
+from .greeter import GreeterService as GreeterService
+```
+
+### 3. Update the entry point
+
+In `src/main.py`, import your service class:
+
+```python
+from service import GreeterService
+...
+svc = GreeterService(cfg)
+```
+
+### 4. Update config and project name
+
+In `config.toml`, set `name` and `description` under `[service]` to reflect your service.
+
+In `pyproject.toml`, update the `name` field under `[project]`.
+
+## Linting and formatting
+This template comes with a [GitHub Actions Workflow](.github/workflows/lint.yml) that runs formatting and linting 
+checks on each push to main and each pull request.
+We reccomend using this as a status check prior to merging.
+
+The workflow uses [Ruff](https://docs.astral.sh/ruff/) and [PyRight](https://github.com/microsoft/pyright).
+You can run the same checks locally with the following commands:
+
+
+Format code:
+
+```bash
+uv run ruff format src/
+```
 
 ```bash
 uv run ruff check src/
@@ -73,15 +125,6 @@ Check for type issues:
 ```bash
  uv run pyright src/          
 ```
-
-Format code:
-
-```bash
-uv run ruff format src/
-```
-
-These checks also run automatically on every pull request and pushes to main via
-the [GitHub Actions workflow](.github/workflows/lint.yml)
 
 ## Proto dependencies
 

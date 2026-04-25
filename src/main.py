@@ -1,8 +1,9 @@
 import asyncio
 import logging
 
-from service import ExampleService
 from h2pcontrol.sdk import H2PServerConfig
+
+from service import ExampleService
 
 logging.basicConfig(
     level=logging.INFO,
@@ -13,9 +14,9 @@ logger = logging.getLogger(__name__)
 
 
 async def main():
-    cfg = H2PServerConfig()  # type: ignore[call-arg]
-    service = ExampleService(cfg)
-    await service.start()
+    cfg = H2PServerConfig.load()
+    svc = ExampleService(cfg)
+    await svc.start()
 
 
 if __name__ == "__main__":

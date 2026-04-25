@@ -1,1 +1,1 @@
-from .example import  ExampleService as ExampleService
+from .example import ExampleService as ExampleService

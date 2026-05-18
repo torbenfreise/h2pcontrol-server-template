@@ -7,12 +7,12 @@ from h2pcontrol.example.v1.example_pb2 import (
 from h2pcontrol.example.v1.example_pb2_grpc import (
     ExampleServiceServicer,
 )
-from h2pcontrol.sdk import H2PServer
+from h2pcontrol.sdk.server import Server
 
 logger = logging.getLogger(__name__)
 
 
-class ExampleService(H2PServer, ExampleServiceServicer):
+class ExampleService(Server, ExampleServiceServicer):
     def _healthy(self) -> bool:
         return True
 

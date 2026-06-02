@@ -5,7 +5,7 @@ and a concrete  implementation of the example service defined in the [h2pcontrol
 
 ## Requirements
 
-- Python 3.14+
+- Python 3.12+
 - [uv](https://docs.astral.sh/uv/)
 
 ## Setup

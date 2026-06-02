@@ -4,9 +4,11 @@ version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
     "grpcio>=1.80.0",
-    "beyer-labs-h2pcontrol-grpc-python>=1.80.0.1.20260406165239",
-    "beyer-labs-h2pcontrol-protocolbuffers-pyi>=34.1.0.1.20260406165239",
-    "beyer-labs-h2pcontrol-protocolbuffers-python>=34.1.0.1.20260406165239",
+    "beyer-labs-h2pcontrol-grpc-python>=1.80.dev0,<2",
+    "beyer-labs-h2pcontrol-protocolbuffers-python>=34.dev0,<36",
+    "beyer-labs-h2pcontrol-protocolbuffers-pyi>=34.dev0,<36",
+    "beyer-labs-h2pcontrol-community-nipunn1313-mypy>=5.1.0.dev0,<6",
+    "beyer-labs-h2pcontrol-community-nipunn1313-mypy-grpc>=5.1.0.dev0,<6",
     "h2pcontrol-sdk",
 ]
 
@@ -26,6 +28,7 @@ select = ["E", "F", "I"]
 url = "https://buf.build/gen/python"
 
 [tool.uv.sources]
-h2pcontrol-sdk = { git = "https://github.com/torbenfreise/h2pcontrol-sdk", rev = "0.2.0" }
+h2pcontrol-sdk = { git = "https://github.com/torbenfreise/h2pcontrol-sdk", branch = "0.2.3" }
 
-
+[tool.uv]
+override-dependencies = ["protobuf>=7.34.1"]

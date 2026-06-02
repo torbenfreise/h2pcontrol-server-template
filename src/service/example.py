@@ -1,12 +1,7 @@
 import logging
 
-from h2pcontrol.example.v1.example_pb2 import (
-    SayHelloRequest,
-    SayHelloResponse,
-)
-from h2pcontrol.example.v1.example_pb2_grpc import (
-    ExampleServiceServicer,
-)
+from h2pcontrol.example.v1.example_pb2 import SayHelloRequest, SayHelloResponse
+from h2pcontrol.example.v1.example_pb2_grpc import ExampleServiceServicer
 from h2pcontrol.sdk.server import Server
 
 logger = logging.getLogger(__name__)

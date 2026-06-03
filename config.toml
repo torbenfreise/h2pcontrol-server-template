@@ -1,6 +1,6 @@
 [manager]
 address = "127.0.0.1:50051"
-heartbeat_interval_s = 5
+retry_interval_s = 5
 
 [service]
 name = "example-service"

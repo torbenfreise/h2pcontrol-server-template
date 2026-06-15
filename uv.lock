@@ -16,19 +16,19 @@ wheels = [
 
 [[package]]
 name = "beyer-labs-h2pcontrol-community-nipunn1313-mypy"
-version = "5.1.0.1.20260609011849+4713f4280ee4"
+version = "5.1.0.1.20260614043543+15e8489af15b"
 source = { registry = "https://buf.build/gen/python" }
 dependencies = [
     { name = "protobuf" },
     { name = "types-protobuf" },
 ]
 wheels = [
-    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-community-nipunn1313-mypy/beyer_labs_h2pcontrol_community_nipunn1313_mypy-5.1.0.1.20260609011849+4713f4280ee4-py3-none-any.whl", upload-time = "2026-06-09T01:18:49Z" },
+    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-community-nipunn1313-mypy/beyer_labs_h2pcontrol_community_nipunn1313_mypy-5.1.0.1.20260614043543+15e8489af15b-py3-none-any.whl", upload-time = "2026-06-14T04:35:43Z" },
 ]
 
 [[package]]
 name = "beyer-labs-h2pcontrol-community-nipunn1313-mypy-grpc"
-version = "5.1.0.1.20260609011849+4713f4280ee4"
+version = "5.1.0.1.20260614043543+15e8489af15b"
 source = { registry = "https://buf.build/gen/python" }
 dependencies = [
     { name = "grpcio" },
@@ -38,43 +38,43 @@ dependencies = [
     { name = "types-protobuf" },
 ]
 wheels = [
-    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-community-nipunn1313-mypy-grpc/beyer_labs_h2pcontrol_community_nipunn1313_mypy_grpc-5.1.0.1.20260609011849+4713f4280ee4-py3-none-any.whl", upload-time = "2026-06-09T01:18:49Z" },
+    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-community-nipunn1313-mypy-grpc/beyer_labs_h2pcontrol_community_nipunn1313_mypy_grpc-5.1.0.1.20260614043543+15e8489af15b-py3-none-any.whl", upload-time = "2026-06-14T04:35:43Z" },
 ]
 
 [[package]]
 name = "beyer-labs-h2pcontrol-grpc-python"
-version = "1.81.1.1.20260609011849+4713f4280ee4"
+version = "1.81.1.1.20260614043543+15e8489af15b"
 source = { registry = "https://buf.build/gen/python" }
 dependencies = [
     { name = "beyer-labs-h2pcontrol-protocolbuffers-python" },
     { name = "grpcio" },
 ]
 wheels = [
-    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-grpc-python/beyer_labs_h2pcontrol_grpc_python-1.81.1.1.20260609011849+4713f4280ee4-py3-none-any.whl", upload-time = "2026-06-10T01:32:56Z" },
+    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-grpc-python/beyer_labs_h2pcontrol_grpc_python-1.81.1.1.20260614043543+15e8489af15b-py3-none-any.whl", upload-time = "2026-06-14T04:35:43Z" },
 ]
 
 [[package]]
 name = "beyer-labs-h2pcontrol-protocolbuffers-pyi"
-version = "35.1.0.1.20260609011849+4713f4280ee4"
+version = "35.1.0.1.20260614043543+15e8489af15b"
 source = { registry = "https://buf.build/gen/python" }
 dependencies = [
     { name = "protobuf" },
     { name = "types-protobuf" },
 ]
 wheels = [
-    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-protocolbuffers-pyi/beyer_labs_h2pcontrol_protocolbuffers_pyi-35.1.0.1.20260609011849+4713f4280ee4-py3-none-any.whl", upload-time = "2026-06-12T20:03:06Z" },
+    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-protocolbuffers-pyi/beyer_labs_h2pcontrol_protocolbuffers_pyi-35.1.0.1.20260614043543+15e8489af15b-py3-none-any.whl", upload-time = "2026-06-14T04:35:43Z" },
 ]
 
 [[package]]
 name = "beyer-labs-h2pcontrol-protocolbuffers-python"
-version = "35.1.0.1.20260609011849+4713f4280ee4"
+version = "35.1.0.1.20260614043543+15e8489af15b"
 source = { registry = "https://buf.build/gen/python" }
 dependencies = [
     { name = "beyer-labs-h2pcontrol-protocolbuffers-pyi" },
     { name = "protobuf" },
 ]
 wheels = [
-    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-protocolbuffers-python/beyer_labs_h2pcontrol_protocolbuffers_python-35.1.0.1.20260609011849+4713f4280ee4-py3-none-any.whl", upload-time = "2026-06-12T20:03:11Z" },
+    { url = "https://buf.build/gen/python/beyer-labs-h2pcontrol-protocolbuffers-python/beyer_labs_h2pcontrol_protocolbuffers_python-35.1.0.1.20260614043543+15e8489af15b-py3-none-any.whl", upload-time = "2026-06-14T04:35:43Z" },
 ]
 
 [[package]]
@@ -163,8 +163,8 @@ wheels = [
 
 [[package]]
 name = "h2pcontrol-sdk"
-version = "0.2.4"
-source = { git = "https://github.com/torbenfreise/h2pcontrol-sdk?rev=0.2.4#314a4c7015158e08aa0238d9aa09b0f9bce0d700" }
+version = "0.2.5"
+source = { git = "https://github.com/torbenfreise/h2pcontrol-sdk?rev=0.2.5#df274b96a20e8121c458cc0cc260d4d28a06096a" }
 dependencies = [
     { name = "beyer-labs-h2pcontrol-community-nipunn1313-mypy" },
     { name = "beyer-labs-h2pcontrol-community-nipunn1313-mypy-grpc" },
@@ -205,7 +205,7 @@ requires-dist = [
     { name = "beyer-labs-h2pcontrol-protocolbuffers-pyi", specifier = ">=34.dev0,<36" },
     { name = "beyer-labs-h2pcontrol-protocolbuffers-python", specifier = ">=34.dev0,<36" },
     { name = "grpcio", specifier = ">=1.80.0" },
-    { name = "h2pcontrol-sdk", git = "https://github.com/torbenfreise/h2pcontrol-sdk?rev=0.2.4" },
+    { name = "h2pcontrol-sdk", git = "https://github.com/torbenfreise/h2pcontrol-sdk?rev=0.2.5" },
 ]
 
 [package.metadata.requires-dev]
@@ -400,11 +400,11 @@ wheels = [
 
 [[package]]
 name = "types-grpcio"
-version = "1.0.0.20260607"
+version = "1.0.0.20260614"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/61/7d/c8260910043cf3c5a87b48ff3dc8c6a7ec26bbf3b659562cb1eea58347fa/types_grpcio-1.0.0.20260607.tar.gz", hash = "sha256:01b6a63a7a566892ab85dec80b081150f6569766fd0d151f991ef3a1011f40ba", size = 14933, upload-time = "2026-06-07T06:11:35.196Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4f/1c/e299150827a2224fe9ddb59e9f789f0eb8e72e0befc23fd47195024311fa/types_grpcio-1.0.0.20260614.tar.gz", hash = "sha256:e86d1aabb7e7eedae487c3ac10e010a13d5db1fd350e766562053af557366aab", size = 15063, upload-time = "2026-06-14T06:23:33.591Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/24/83/f76050f33d1bd1e026d9632fc9c7043b6bb9cc61a9f09f99a0f5e7fe6332/types_grpcio-1.0.0.20260607-py3-none-any.whl", hash = "sha256:8d84cbf42768a5bae66f62d9a3313ff94fa25ed8616c07396d66d4dde69f8949", size = 15538, upload-time = "2026-06-07T06:11:34.11Z" },
+    { url = "https://files.pythonhosted.org/packages/33/f5/a8b8ca4d891bc4e835ef758a8fb50c7539c7f45bc0e42fae2b847cbc59b7/types_grpcio-1.0.0.20260614-py3-none-any.whl", hash = "sha256:050472cb4ef329ae8fe20278c62bc0da5b961aad3dd889cc35f6e0c70d368dae", size = 15629, upload-time = "2026-06-14T06:23:32.616Z" },
 ]
 
 [[package]]

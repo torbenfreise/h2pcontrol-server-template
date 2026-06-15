@@ -21,7 +21,7 @@ The server configuration is stored in [config.toml](config.toml)
 ```toml
 [manager]
 address = "127.0.0.1:50051"
-heartbeat_interval_s = 5
+retry_interval_s = 5
 
 [service]
 name = "greeter"
@@ -70,10 +70,10 @@ Rename `src/service/example.py` to match your service (e.g. `src/service/greeter
 ```python
 from h2pcontrol.<package>.<name>_pb2 import ...
 from h2pcontrol.<package>.<name>_pb2_grpc import <ServiceName>Servicer
-from h2pcontrol.sdk import H2PServer
+from h2pcontrol.sdk import Server
 
 
-class <ServiceName>(H2PServer, <ServiceName>Servicer):
+class <ServiceName>(Server, <ServiceName>Servicer):
     # implement your server methods here
 ```
 

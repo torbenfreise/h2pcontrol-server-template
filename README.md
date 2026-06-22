@@ -100,37 +100,3 @@ svc = GreeterService(cfg)
 In `config.toml`, set `name` and `description` under `[service]` to reflect your service.
 
 In `pyproject.toml`, update the `name` field under `[project]`.
-
-## Linting and formatting
-This template comes with a [GitHub Actions Workflow](.github/workflows/lint.yml) that runs formatting and linting 
-checks on each push to main and each pull request.
-We reccomend using this as a status check prior to merging.
-
-The workflow uses [Ruff](https://docs.astral.sh/ruff/) and [PyRight](https://github.com/microsoft/pyright).
-You can run the same checks locally with the following commands:
-
-
-Format code:
-
-```bash
-uv run ruff format src/
-```
-
-```bash
-uv run ruff check src/
-```
-
-Check for type issues:
-
-```bash
- uv run pyright src/          
-```
-
-## Proto dependencies
-
-Generated code is pulled from the [Buf Schema Registry](https://buf.build/beyer-labs/h2pcontrol) via the
-`buf.build/gen/python` index configured in `pyproject.toml`. To update to the latest proto versions:
-
-```bash
-uv sync --upgrade
-```

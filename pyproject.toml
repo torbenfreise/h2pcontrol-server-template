@@ -28,7 +28,7 @@ select = ["E", "F", "I"]
 url = "https://buf.build/gen/python"
 
 [tool.uv.sources]
-h2pcontrol-sdk = { git = "https://github.com/torbenfreise/h2pcontrol-sdk", rev = "0.2.5" }
+h2pcontrol-sdk = { git = "https://github.com/torbenfreise/h2pcontrol-sdk", rev = "0.2.7" }
 
 [tool.uv]
 override-dependencies = ["protobuf>=7.34.1"]
